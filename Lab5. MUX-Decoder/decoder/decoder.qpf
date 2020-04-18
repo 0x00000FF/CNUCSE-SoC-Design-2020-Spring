@@ -19,13 +19,13 @@
 #
 # Quartus Prime
 # Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-# Date created = 03:18:41  April 12, 2020
+# Date created = 18:32:40  April 18, 2020
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "19.1"
-DATE = "03:18:41  April 12, 2020"
+DATE = "18:32:40  April 18, 2020"
 
 # Revisions
 
-PROJECT_REVISION = "decoder"
+PROJECT_REVISION = "decoder_top"
