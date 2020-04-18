@@ -96,7 +96,7 @@
             
             \newpage
             \subsection{2-to-4 Decoder}
-                \begin{table}[ht]
+                \begin{table}[!htb]
                     \centering
                     \begin{tabular}{|l|l|l|l|l|l|}
                     \hline
@@ -107,7 +107,7 @@
                     1 & 1 & 1 & 0 & 0 & 0 \\ \hline
                     \end{tabular}
                 \end{table}
-                \begin{table}[ht]
+                \begin{table}[!htb]
                     \centering
                     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
                         \hline
@@ -122,12 +122,12 @@
                 \paragraph{BoolExp: $ C = AB $ $ D = AB' $ $ E = A'B $ $ F = A'B' $}
         \newpage
         \section{Logic Diagram}
-            \begin{figure}[ht]
+            \begin{figure}[!htb]
                 \centering
                 \includegraphics[width=\textwidth]{diagrams/logic_mux.png}
                 \caption{Logic Diagram for 4-to-1 Multiplexer}
             \end{figure}
-            \begin{figure}[ht]
+            \begin{figure}[!htb]
                 \centering
                 \includegraphics[width=\textwidth]{diagrams/logic_decoder.png}
                 \caption{Logic Diagram for 2-to-4 Decoder}
@@ -137,68 +137,35 @@
         \section{Source Code}
             \subsection{Structural Style}
 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{mux/st_4to1_mux.v}
-                \caption{Structural Style Verilog Code of 4-to-1 MUX}
-            \end{figure}
+                \lstinputlisting[caption=Structural Style Verilog Code of 4-to-1 MUX]{mux/st_4to1_mux.v}
 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{decoder/st_decoder_2to4.v}
-                \caption{Structural Style Verilog Code of 2-to-4 Decoder}
-            \end{figure}
+                \lstinputlisting[caption=Structural Style Verilog Code of 2-to-4 Decoder]{decoder/st_decoder_2to4.v}
             
             \subsection{Dataflow Style}
 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{mux/df_4to1_mux.v}
-                \caption{Dataflow Style Verilog Code of 4-to-1 MUX}
-            \end{figure}
+                \lstinputlisting[caption=Dataflow Style Verilog Code of 4-to-1 MUX]{mux/df_4to1_mux.v}
 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{decoder/df_decoder_2to4.v}
-                \caption{Dataflow Style Verilog Code of 2-to-4 Decoder}
-            \end{figure}
+                \lstinputlisting[caption=Dataflow Style Verilog Code of 2-to-4 Decoder]{decoder/df_decoder_2to4.v}
 
-            \newpage
             \subsection{Behavioral Style}
+                \lstinputlisting[caption=Behavioral Style Verilog Code of 4-to-1 MUX]{mux/bh_4to1_mux.v}
 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{mux/bh_4to1_mux.v}
-                \caption{Behavioral Style Verilog Code of 4-to-1 MUX}
-            \end{figure}
-
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{decoder/bh_decoder_2to4.v}
-                \caption{Behavioral Style Verilog Code of 2-to-4 Decoder}
-            \end{figure}
+                \lstinputlisting[caption=Behavioral Style Verilog Code of 2-to-4 Decoder]{decoder/bh_decoder_2to4.v}
 
         \section{Testbench} 
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{mux/tb_4to1_mux.v}
-                \caption{Testbench Verilog Code of 4-to-1 MUX}
-            \end{figure}
-            \begin{figure}[ht]
-                \centering
-                \lstinputlisting{decoder/tb_decoder_2to4.v}
-                \caption{Testbench Verilog Code of 2-to-4 Decoder}
-            \end{figure} 
+                \lstinputlisting[caption=Testbench Verilog Code of 4-to-1 MUX]{mux/tb_4to1_mux.v}
+
+                \lstinputlisting[caption=Testbench Verilog Code of 2-to-4 Decoder]{decoder/tb_decoder_2to4.v}
 
         \section{Simulation Result}
-            \begin{figure}[ht]
+            \begin{figure}[!htb]
                 \centering
                 \includegraphics[width=\textwidth]{diagrams/waveform_mux.PNG}
                 \caption{Waveform: 4-to-1 Multiplexer}
                 \label{fig:waveform-mux}
             \end{figure} 
             
-            \begin{figure}[ht]
+            \begin{figure}[!htb]
                 \centering
                 \includegraphics[width=\textwidth]{diagrams/waveform_decoder.PNG}
                 \caption{Waveform: 2-to-4 Decoder}
