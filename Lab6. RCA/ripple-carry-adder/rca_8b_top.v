@@ -1,3 +1,14 @@
+/*
+ *   8bit RCA Top Module
+ *   201704150 Kangjun Heo
+ *
+ *   Input:  [7:0] x, y
+ *           carry_in 
+ *
+ *   Output: [7:0] sum
+ *           carry_out
+ */
+
 module rca_8b_top(sum, carry_out, x, y, carry_in);
     output [7:0] sum;
     output carry_out;
@@ -8,6 +19,7 @@ module rca_8b_top(sum, carry_out, x, y, carry_in);
     wire   [7:0] out;
     wire   [6:0] carry;
     
+    // pass input and carries for each full adders
     full_adder_1b  adder0(.s(sum[0]), .cout(carry[0]),
                           .x(x[0]), .y(y[0]), .cin(carry_in));
                           
