@@ -1,9 +1,9 @@
-module fsm_top(y1, y2, x, clock);
+module fsm_top(Y1, Y2, X, clock);
 
-    input  x, clock;
-    output y1, y2;
+    input  X, clock;
+    output Y1, Y2;
     
     
-    fsm_moore fsm0(.y(y1), .x(x), .clock(clock));
-    /* this line is for mealy machine */
+    fsm_moore fsm0(.Y(Y1), .X(X), .clock(clock));
+    fsm_mealy fsm1(.Y(Y2), .X(X), .clock(clock));
 endmodule

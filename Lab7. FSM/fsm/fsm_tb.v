@@ -2,32 +2,34 @@
 
 module fsm_tb;
     
-    reg  x, clock;
-    wire y1, y2;
+    reg  X, clock;
+    wire Y1, Y2;
     
-    fsm_top fsm0(.y1(y1), .y2(y2), .x(x), .clock(clock));
+    fsm_top fsm0(.Y1(Y1), .Y2(Y2), .X(X), .clock(clock));
     
     initial begin
-        x = 0; clock = 0;
+        X = 1'bx; clock = 0;
     end
     
-    // clock timing: 5ns
+    // clock interval: 5ns
     always @ (*) begin
         #5 clock <= ~clock;
     end
     
     always @ (posedge clock) begin
+        X = 0;
+        
         #30
-        x = 1;
+        X = 1;
         
         #40
-        x = 0;
+        X = 0;
         
         #70
-        x = 1;
+        X = 1;
         
         #100
-        x = 0;
+        X = 0;
         
         #40;
     end
