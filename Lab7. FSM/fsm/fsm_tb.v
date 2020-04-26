@@ -17,20 +17,64 @@ module fsm_tb;
     end
     
     always @ (posedge clock) begin
+        X = 0; // 01 -> 11
+        
+        #10
+        X = 1;
+        
+        #10    // 01 -> 02 -> 10
         X = 0;
+        
+        #20
+        X = 1;
+        
+        #10
+        X = 0;  // 01 -> 02 -> 03 -> 10
         
         #30
         X = 1;
         
-        #40
+        #10    // 01 -> 02 -> 03 -> 04(should be output 1) -> 10
         X = 0;
         
-        #70
+        #40
+        X = 1;                    // 150ns
+        
+        // flip the testcase; Reset
+        #10
+        X = 0;
+        
+        #10
         X = 1;
         
-        #100
+        #10
         X = 0;
         
-        #40;
+        #10    
+        X = 1;
+        
+        #20
+        X = 0;
+        
+        #10
+        X = 1; 
+        
+        #30
+        X = 0;
+        
+        #10    
+        X = 1;
+        
+        #40
+        X = 0;                  // 300ns
+        
+        
+        // will output persists?
+        #50
+        X = 1;
+        
+        #50
+        X = 0;
+        #50;    // test done, total 450ns
     end
 endmodule
