@@ -1,0 +1,88 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  c:/intelfpga_lite/19.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/19.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  fsm-top.vo
+Sim SDF file          :  fsm-top__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/19.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File fsm-top_run_msim_gate_verilog.do already exists - backing up current file as fsm-top_run_msim_gate_verilog.do.bak5
+Probing transcript
+ModelSim-Altera Info: # Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # do fsm-top_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {fsm-top.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 16:48:03 on Apr 26,2020
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." fsm-top.vo 
+ModelSim-Altera Info: # -- Compiling module fsm_top
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	fsm_top
+ModelSim-Altera Info: # End time: 16:48:03 on Apr 26,2020, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/patche/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab7.\ FSM/fsm {C:/Users/patche/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab7. FSM/fsm/fsm_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 16:48:03 on Apr 26,2020
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/patche/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab7. FSM/fsm" C:/Users/patche/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab7. FSM/fsm/fsm_tb.v 
+ModelSim-Altera Info: # -- Compiling module fsm_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	fsm_tb
+ModelSim-Altera Info: # End time: 16:48:03 on Apr 26,2020, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  fsm_tb
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" fsm_tb 
+ModelSim-Altera Info: # Start time: 16:48:03 on Apr 26,2020
+ModelSim-Altera Info: # Loading work.fsm_tb
+ModelSim-Altera Info: # Loading work.fsm_top
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_obuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_io_ibuf
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_clkena
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # Loading cyclonev_ver.cyclonev_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Warning: # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+ModelSim-Altera Info: #           File in use by: patche  Hostname: DESKTOP-V83UOU2  ProcessID: 23588
+ModelSim-Altera Info: #           Attempting to use alternate WLF file "./wlftiygjwm".
+ModelSim-Altera Warning: # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+ModelSim-Altera Info: #           Using alternate file: ./wlftiygjwm
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # Break key hit
+ModelSim-Altera Info: # Break in Module cyclonev_io_ibuf at /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v line 1360
+ModelSim-Altera Info: # Error opening C:/build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+ModelSim-Altera Info: # Path name 'C:/build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v' doesn't exist.
+ModelSim-Altera Info: # Break key hit
+ModelSim-Altera Info: restart
+ModelSim-Altera Info: run
+ModelSim-Altera Info: # End time: 19:58:02 on Apr 26,2020, Elapsed time: 3:09:59
+ModelSim-Altera Info: # Errors: 1, Warnings: 2
+Info: NativeLink simulation flow was successful

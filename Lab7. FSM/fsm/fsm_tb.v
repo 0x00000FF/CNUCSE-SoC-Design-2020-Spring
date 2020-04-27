@@ -1,17 +1,19 @@
 `timescale 1ns/100ps
 
-module fsm_tb;
-    
+module fsm_tb;    
     reg  X, clock;
+    
+    // Y1 for Moore Machine, Y2 for Mealy Machine
     wire Y1, Y2;
     
     fsm_top fsm0(.Y1(Y1), .Y2(Y2), .X(X), .clock(clock));
     
+    // Initialize X as Unknown, Clock 0
     initial begin
         X = 1'bx; clock = 0;
     end
     
-    // clock interval: 5ns
+    // clock interval = 5ns
     always @ (*) begin
         #5 clock <= ~clock;
     end

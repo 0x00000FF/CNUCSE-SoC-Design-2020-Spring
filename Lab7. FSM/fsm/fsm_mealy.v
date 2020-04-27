@@ -8,15 +8,16 @@ module fsm_mealy (Y, X, clock);
     reg       Y;
     
     always @(posedge clock) begin
+        // begin state & output logic
         $display("[ML] current state(sm, ss) = %b, %b | input = %b", state_master, state_slave, X);
-        if (state_master == X && state_slave == 2'b10) begin
+        if (state_master == X && state_slave == 2'b10) begin // when state and input accepted
             $display("[ML] >> Reached input = 1");
-            Y = 1;
+            Y = 1; // set output 1
         end
-        else begin 
-            if (state_master == X) 
+        else begin  // otherwise set output 0
+            if (state_master == X)  // update slave state 
                 state_slave = state_slave + 1;
-            else begin 
+            else begin  // reset state
                 $display("[ML] state mistmatch, update to %b", X);
                 state_master = X;
                 state_slave  = 0;
