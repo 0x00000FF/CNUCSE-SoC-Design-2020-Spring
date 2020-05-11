@@ -1,0 +1,75 @@
+\documentclass[a4paper]{report}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{fontspec}
+\usepackage[section]{placeins}
+
+
+\title{Lab8\_Kogge Stone Adder design}
+\author{201704150 Kangjun Heo}
+
+\lstset{basicstyle=\ttfamily,breaklines=true}
+\lstset{framextopmargin=10pt,framexbottommargin=10pt,frame=tb}
+
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \chapter{Purpose of the lab}
+
+        \paragraph{This lab aims to design 16bit Kogge Stone Adder with Verilog language. This report contains state diagrams, waveforms and verilog codes with test cases.}
+    
+        \section{Kogge Stone Adder}
+
+        \paragraph{\normalfont Kogge Stone Adder is a sort of Carry Propagation Adder(CPA), generates carry output and sum with parallel carry look-ahead tree. It implements 'dot', which achieves associativity that enables to parallelize carry operations.}
+
+        \paragraph{\normalfont In this lab, 16 bit Kogge Stone Adder will be implmeneted, which gets 2 16-bit sized inputs and carry-in, outputs 1 16-bit sized data and a bit of carry out.}
+        
+
+    \chapter{Design Procedure}
+        \begin{figure}[!htb]
+            \centering
+            %\includegraphics[width=\textwidth]{}
+            \caption {Block diagram of Testbench}
+            \label{fig:wf-0}
+        \end{figure}
+        
+
+    \chapter{Simulation}
+        \section{Source Code}
+            \lstinputlisting[caption=Top Module of Kogge Stone Adder]{ksa_16b/ksa_16b_top.v}
+        \section{Testbench}
+            \begin{figure}[!htb]
+                \centering
+                %\includegraphics[width=\textwidth]{}
+                \caption {Block diagram of Testbench}
+                \label{fig:wf-0}
+            \end{figure}
+            \lstinputlisting[caption=Testbench Code]{ksa_16b/ksa_16b_tb.v}
+
+        \section{Simulation Result}
+            \begin{figure}[!htb]
+                \centering
+                %\includegraphics[width=\textwidth]{diagrams/waveform-first.png}
+                \caption {First Result Set of Simulation}
+                \label{fig:wf-1}
+            \end{figure}
+
+    \chapter{Evaluation}
+        \paragraph{\normalfont For precise testing, $65535 \times 65535$ (4294836225) cases of testing were going to be executed - for each inputs, (0000000000000000 to 1111111111111111, about 43 seconds in modelsim time - however, too much time was taken therefore ns of test were actually executed. and the result was same as below:}
+
+
+    \chapter{Discussions}
+        \section{Key Part of This Lab}
+            \paragraph{\normalfont There were 5 stages of Carry Look-Ahead tree, which has decreasing black cell operation for each stage, with regular count. each (P, G) pair is combined with previous inputs.}
+
+        \section{Mistakes}
+            \paragraph{\normalfont Because of the characteristics of KSA logic circuit, }
+
+        \section{Expected Improvements}
+            \paragraph{\normalfont Conditional branches are useful when designing modules in behavior form. However, Its mechanism is not exactly same as other C-like languages so different plotting is required when using it.}
+\end{document}
