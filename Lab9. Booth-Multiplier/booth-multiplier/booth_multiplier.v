@@ -1,22 +1,12 @@
 /*
- * Partial Product Generator
- * ma: multiplier
- * be: booth-encoded multiplicand
- * pp: partial product
- */
-module booth_ppg(pp, ma, be);
-	
-endmodule
-
-/*
  * Booth Encoder
  *
- * pb: partial(3bits) multiplicand
+ * pb: partial(3bits) multiplier
  * y:  encoding result
  */
 module booth_encoder(y, pb);
 	input  [2:0] pb;
-	output [3:0] y;
+	output [2:0] y;
 
 	always begin
 		case (pb)
@@ -31,12 +21,23 @@ module booth_encoder(y, pb);
 	end
 endmodule
 
+/*
+ * Partial Product Generator
+ * ma: multiplicand
+ * be: booth-encoded multiplier
+ * pp: partial product
+ */
+module booth_ppg(pp, ma, be);
+	input 
+endmodule
+
+
 
 /*
  * 16bx16x Modified Radix-4 Booth Multiplier
  *
- * ma:   16bit multiplier
- * mb:   16bit multiplicand
+ * ma:   16bit multiplicand
+ * mb:   16bit multiplier
  * ov:   overflow bit
  * mout: result
  */
@@ -46,4 +47,5 @@ module booth_multiplier(ov, mout, ma, mb);
 	output [30:0]  mout;
 	output         ov;
 	
+	// encode
 endmodule
