@@ -1,25 +1,25 @@
 `timescale 1ns/100ps
 
-module ksa_16b_tb;
-    reg [15:0] a, b;
-    reg cin;
+module ksa_32b_tb;
+    reg  [31:0] a, b;
+    reg  cin;
     
     wire cout;
-    wire [15:0] sum;
+    wire [31:0] sum;
     
     integer     check, i, j;
     integer     num_correct, num_wrong;
     
-    ksa_16b_top ksa(.cout(cout), .sum(sum), .a(a), .b(b), .cin(cin));
+    ksa_32b_top ksa(.cout(cout), .sum(sum), .a(a), .b(b), .cin(cin));
     
     initial begin
         num_correct = 0; num_wrong = 0;
         $display("=== test begin ===", num_correct, num_wrong);
 
-        // test for 16bit max (65535)
-        for (i = 25452; i < 65536; i = i + 1) begin
+        // test for 32bit max (FFFFFFFF)
+        for (i = 32'h73412853; i < 32'hffffffff; i = i + 1) begin
             a = i;
-            for (j = 0; j < 65536; j = j + 1) begin
+            for (j = 32'h58831922; j < 32'hffffffff; j = j + 1) begin
                 b = j;
                 cin = 1'b0;
                 
@@ -38,5 +38,4 @@ module ksa_16b_tb;
         
         $display("test done, num_correct=%d, num_wrong=%d", num_correct, num_wrong);
     end
-
 endmodule
