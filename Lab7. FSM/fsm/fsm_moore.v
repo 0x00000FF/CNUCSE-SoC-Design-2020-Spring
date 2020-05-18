@@ -12,7 +12,7 @@ module fsm_moore (Y, X, clock);
         if (state_master == X) begin
             $display("[MR] master state matches sm=%b, ss=%b, x=%b", state_master, state_slave, X);
             if (state_slave != 2'b11) begin // when state less than 2'b11
-                state_slave = state_slave + 1;
+                state_slave = state_slave + 1'b1;
                 $display("[MR] >> slave state updated ss=%b", state_slave);
             end
         end

@@ -16,7 +16,7 @@ module fsm_mealy (Y, X, clock);
         end
         else begin  // otherwise set output 0
             if (state_master == X)  // update slave state 
-                state_slave = state_slave + 1;
+                state_slave = state_slave + 1'b1;
             else begin  // reset state
                 $display("[ML] state mistmatch, update to %b", X);
                 state_master = X;
