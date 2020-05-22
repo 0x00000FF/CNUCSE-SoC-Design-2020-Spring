@@ -25,7 +25,7 @@ module shifter_16b_tb;
             
             for (j = 0; j < 16; j = j+1) begin
                 sel   = j;
-                check = x << j;
+                check = x <<< j;
                  
                 #10
                 if (y == check) check_correct = check_correct + 1;
@@ -40,7 +40,7 @@ module shifter_16b_tb;
             dir = 1;
             for (j = 0; j < 16; j = j+1) begin
                 sel   = j;
-                check = x >> j;
+                check = x >>> j;
                  
                 #10
                 if (y == check) check_correct = check_correct + 1;
