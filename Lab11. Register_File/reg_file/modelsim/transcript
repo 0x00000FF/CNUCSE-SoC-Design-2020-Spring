@@ -1,0 +1,80 @@
+# Compile of RegFile16B_tb.v was successful.
+# Compile of RegFile16B.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.RegFile16B_tb
+# vsim work.RegFile16B_tb 
+# Start time: 22:38:47 on May 31,2020
+# Loading work.RegFile16B_tb
+# Loading work.RegFile16B
+# Loading work.Decoder16B_4to16
+# Loading work.Register16B
+# Loading work.Mux16B_16to1
+# Loading work.D_FF
+# ** Error (suppressible): (vsim-3053) C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v(11): Illegal output or inout port connection for port 'readDataA'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegFile16B_tb/regFile File: C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+# ** Error (suppressible): (vsim-3053) C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v(11): Illegal output or inout port connection for port 'readDataB'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegFile16B_tb/regFile File: C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+# Error loading design
+# End time: 22:38:47 on May 31,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vsim work.RegFile16B_tb
+# vsim work.RegFile16B_tb 
+# Start time: 22:39:25 on May 31,2020
+# Loading work.RegFile16B_tb
+# Loading work.RegFile16B
+# Loading work.Decoder16B_4to16
+# Loading work.Register16B
+# Loading work.Mux16B_16to1
+# Loading work.D_FF
+# ** Error (suppressible): (vsim-3053) C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v(11): Illegal output or inout port connection for port 'readDataA'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegFile16B_tb/regFile File: C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+# ** Error (suppressible): (vsim-3053) C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v(11): Illegal output or inout port connection for port 'readDataB'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegFile16B_tb/regFile File: C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+# Error loading design
+# End time: 22:39:25 on May 31,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# Compile of RegFile16B_tb.v was successful.
+# Compile of RegFile16B.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.RegFile16B_tb
+# vsim work.RegFile16B_tb 
+# Start time: 22:39:33 on May 31,2020
+# Loading work.RegFile16B_tb
+# Loading work.RegFile16B
+# Loading work.Decoder16B_4to16
+# Loading work.Register16B
+# Loading work.Mux16B_16to1
+# Loading work.D_FF
+add wave -position insertpoint  \
+sim:/RegFile16B_tb/CLK \
+sim:/RegFile16B_tb/nRST \
+sim:/RegFile16B_tb/writeEnable \
+sim:/RegFile16B_tb/readAddrA \
+sim:/RegFile16B_tb/readAddrB \
+sim:/RegFile16B_tb/writeAddr \
+sim:/RegFile16B_tb/writeData \
+sim:/RegFile16B_tb/readDataA \
+sim:/RegFile16B_tb/readDataB
+run
+add wave -position insertpoint  \
+sim:/RegFile16B_tb/regFile/register0/Q
+add wave -position insertpoint sim:/RegFile16B_tb/regFile/register1/*
+# Compile of RegFile16B_tb.v was successful.
+# Compile of RegFile16B.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Break key hit
+# Break key hit
+restart
+# Loading work.RegFile16B_tb
+# Loading work.RegFile16B
+# Loading work.Decoder16B_4to16
+# Loading work.Register16B
+# Loading work.Mux16B_16to1
+# Loading work.D_FF
+run
+restart
+run
+restart
+run
+# End time: 23:03:57 on May 31,2020, Elapsed time: 0:24:24
+# Errors: 0, Warnings: 0

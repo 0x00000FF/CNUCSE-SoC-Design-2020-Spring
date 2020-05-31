@@ -111,14 +111,46 @@ module RegFile16B(readDataA, readDataB, readAddrA, readAddrB, CLK, nRST, writeEn
     
     Decoder16B_4to16 writeDecoder(.out(ffDec), .in(writeAddr));
     
-    genvar regGen;
     
-    generate 
-        for (regGen = 0; regGen < 16; regGen = regGen + 1) begin : registerGen
-            and         passEnable(ffDecEnable[regGen], ffDec[regGen], writeEnable);
-            Register16B register  (.Q(ffData[regGen]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[regGen]));
-        end
-    endgenerate
+    and         passEnable0 (ffDecEnable[0],  ffDec[0],  writeEnable);
+    and         passEnable1 (ffDecEnable[1],  ffDec[1],  writeEnable);
+    and         passEnable2 (ffDecEnable[2],  ffDec[2],  writeEnable);
+    and         passEnable3 (ffDecEnable[3],  ffDec[3],  writeEnable);
+     
+    and         passEnable4 (ffDecEnable[4],  ffDec[4],  writeEnable);
+    and         passEnable5 (ffDecEnable[5],  ffDec[5],  writeEnable);
+    and         passEnable6 (ffDecEnable[6],  ffDec[6],  writeEnable);
+    and         passEnable7 (ffDecEnable[7],  ffDec[7],  writeEnable);
+     
+    and         passEnable8 (ffDecEnable[8],  ffDec[8],  writeEnable);
+    and         passEnable9 (ffDecEnable[9],  ffDec[9],  writeEnable);
+    and         passEnablea (ffDecEnable[10], ffDec[10], writeEnable);
+    and         passEnableb (ffDecEnable[11], ffDec[11], writeEnable);
+     
+    and         passEnablec (ffDecEnable[12], ffDec[12], writeEnable);
+    and         passEnabled (ffDecEnable[13], ffDec[13], writeEnable);
+    and         passEnablee (ffDecEnable[14], ffDec[14], writeEnable);
+    and         passEnablef (ffDecEnable[15], ffDec[15], writeEnable);
+     
+    Register16B register0   (.Q(ffData[0]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[0]));
+    Register16B register1   (.Q(ffData[1]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[1]));
+    Register16B register2   (.Q(ffData[2]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[2]));
+    Register16B register3   (.Q(ffData[3]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[3]));
+                                                                                                   
+    Register16B register4   (.Q(ffData[4]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[4]));
+    Register16B register5   (.Q(ffData[5]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[5]));
+    Register16B register6   (.Q(ffData[6]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[6]));
+    Register16B register7   (.Q(ffData[7]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[7]));
+                                                                                                   
+    Register16B register8   (.Q(ffData[8]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[8]));
+    Register16B register9   (.Q(ffData[9]),  .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[9]));
+    Register16B registera   (.Q(ffData[10]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[10]));
+    Register16B registerb   (.Q(ffData[11]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[11]));
+                                                                                                   
+    Register16B registerc   (.Q(ffData[12]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[12]));
+    Register16B registerd   (.Q(ffData[13]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[13]));
+    Register16B registere   (.Q(ffData[14]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[14]));
+    Register16B registerf   (.Q(ffData[15]), .CLK(CLK), .nRST(nRST), .D(writeData), .EN(ffDecEnable[15]));  
     
     Mux16B_16to1 regReadA(.out(readDataA), 
                           .in0(ffData[0]),  .in1(ffData[1]),  .in2(ffData[2]),  .in3(ffData[3]), 

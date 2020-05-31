@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/19.1
+vD_FF
+Z0 !s110 1590932467
+!i10b 1
+!s100 `ekZ1G3T=CYY]gT<6ZejA3
+I_UjePITkgf4U7JO1=JheT3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/modelsim
+Z3 w1590930212
+Z4 8C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+Z5 FC:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v
+L0 76
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1590932467.000000
+Z8 !s107 C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@d_@f@f
+vDecoder16B_4to16
+R0
+!i10b 1
+!s100 lM;bCW4B1PamXN110nbzN3
+IeFoMO4[jQ79bl[?jC4Q7R1
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@decoder16@b_4to16
+vMux16B_16to1
+R0
+!i10b 1
+!s100 609jAQKB9h7_IcbMGNd0>3
+I>BnAPFo2Wamd@VP5k46653
+R1
+R2
+R3
+R4
+R5
+L0 34
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@mux16@b_16to1
+vRegFile16B
+R0
+!i10b 1
+!s100 ocmGiZc6o]@e2DNemlWNB0
+IY@P0Q5hdWH7JC?_0UCEo50
+R1
+R2
+R3
+R4
+R5
+L0 103
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@reg@file16@b
+vRegFile16B_tb
+R0
+!i10b 1
+!s100 _0=WMefLBV;Q:C_Ck20Xz2
+ICdjz=m8^XU<h?3LZMj6a92
+R1
+R2
+w1590932450
+8C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v
+FC:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/patch/Documents/GitHub/CNUCSE-SoC-Design-2020-Spring/Lab11. Register_File/reg_file/RegFile16B_tb.v|
+!i113 1
+R10
+R11
+n@reg@file16@b_tb
+vRegister16B
+R0
+!i10b 1
+!s100 LUYOnoMc34_?iUK_0<N@P1
+I^CO1:2NL0PC^WPFo4AXz73
+R1
+R2
+R3
+R4
+R5
+L0 88
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@register16@b
