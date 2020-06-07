@@ -54,7 +54,7 @@ module shifter_16b_tb;
             dir = 0; rot = 0; // rotate left
             for (j = 0; j < 16; j = j+1) begin
                 sel   = j;
-                check = { check[14-j:0], check[15:15-j] };
+                check = { check[14-j +: j], check[15 +: 15-j] };
                  
                 #10
                 if (y == check) check_correct = check_correct + 1;
@@ -68,7 +68,7 @@ module shifter_16b_tb;
             dir = 0; rot = 0; // rotate right
             for (j = 0; j < 16; j = j+1) begin
                 sel   = j;
-                check = { check[j-1:0], check[15:0+j] };
+                check = { check[j-1 +: 0], check[15 +: 0+j] };
                  
                 #10
                 if (y == check) check_correct = check_correct + 1;
